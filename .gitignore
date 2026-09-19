@@ -1,0 +1,35 @@
+# 依赖与构建产物
+node_modules/
+.plasmo/
+build/
+out/
+dist/
+
+# 个人/本地配置与凭证：绝不提交
+.env
+.env.*
+!.env.example
+keys/
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+
+# 开发期诊断日志（含会话标识，勿提交）
+diag/
+
+# 增量编译缓存与日志
+*.tsbuildinfo
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

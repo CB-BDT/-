@@ -1,0 +1,50 @@
+{
+  "name": "whatsapp-tradelingo",
+  "displayName": "TradeLingo for WhatsApp（免费开源）",
+  "version": "0.1.0",
+  "private": true,
+  "description": "免费开源 · WhatsApp Web 助手：消息自动翻译与多引擎切换、出站回译、客户资料与备注、快捷话术、地图与定时消息、AI 会话总结与回复建议；界面支持中英双语",
+  "author": "TradeLingo contributors",
+  "scripts": {
+    "build": "plasmo build && npm run copy-assets",
+    "copy-assets": "node -e \"const fs=require('fs');const dir='build/chrome-mv3-prod/assets';fs.mkdirSync(dir,{recursive:true});fs.copyFileSync('node_modules/@wppconnect/wa-js/dist/wppconnect-wa.js',dir+'/wppconnect-wa.js');fs.copyFileSync('scripts/relay.js',dir+'/relay.js');console.log('copied wa-js + relay to build/assets/')\"",
+    "dev": "plasmo dev",
+    "package": "plasmo package"
+  },
+  "manifest": {
+    "permissions": [
+      "storage",
+      "scripting",
+      "alarms"
+    ],
+    "host_permissions": [
+      "https://web.whatsapp.com/*",
+      "https://translate.googleapis.com/*",
+      "https://lingva.ml/*",
+      "https://api.deepseek.com/*",
+      "https://api-free.deepl.com/*",
+      "https://api.deepl.com/*",
+      "https://nominatim.openstreetmap.org/*",
+      "https://tile.openstreetmap.org/*"
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["assets/wppconnect-wa.js", "assets/relay.js"],
+        "matches": ["https://web.whatsapp.com/*"]
+      }
+    ]
+  },
+  "dependencies": {
+    "@wppconnect/wa-js": "^4.6.0",
+    "libphonenumber-js": "^1.13.13",
+    "plasmo": "^0.90.5",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.3.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "~5.8.2"
+  }
+}
