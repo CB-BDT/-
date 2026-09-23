@@ -1,8 +1,8 @@
 # TradeLingo for WhatsApp（免费开源多功能翻译插件）
 
-WhatsApp Web 浏览器扩展（Chrome / Edge，Manifest V3）：在聊天页面直接完成**双向翻译**、**联系人资料管理**与**话术/定时消息**，全部数据留在本地。
+WhatsApp Web 浏览器扩展（Chrome / Edge，Manifest V3）：在聊天页面直接完成**双向翻译**、**联系人资料管理**与**话术/定时消息**，以及AI总结话术全部内容，AI帮忙回复话术内容，发送定位，定时发送消息 等全部数据留在本地。
 
-> 非官方项目，与 WhatsApp / Meta 无任何关联。请自行评估使用风险（见文末免责声明）。
+> 非官方项目，与 WhatsApp / Meta 无任何关联。使用前必须看文末免责声明。
 
 ## 功能
 
